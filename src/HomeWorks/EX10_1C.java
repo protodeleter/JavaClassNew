@@ -94,7 +94,6 @@ public class EX10_1C {
         System.out.println("max " + max);
         System.out.println("smallestRain " + smallestRain);
 
-
     }
 
     /**

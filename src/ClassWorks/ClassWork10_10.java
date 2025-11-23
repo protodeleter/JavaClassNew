@@ -1,4 +1,4 @@
-package Lecture10;
+package ClassWorks;
 
 import java.util.Scanner;
 
