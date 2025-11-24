@@ -8,7 +8,17 @@ public class Ex11_1B {
     public static void main(String[] args) {
 //        exeOne();
 
-        exeTwo(7 );
+
+        int[] c = new int[]{7,8,9,10};
+        int num = 0;
+        for (int i = 0; i < c.length; i++) {
+            num = exeTwo(c[i] );
+            c[i] = num;
+        }
+        for (int i = 0; i < c.length; i++) {
+            System.out.println(c[i]);
+        }
+
     }
 
     /**
@@ -62,6 +72,7 @@ public class Ex11_1B {
 
         int sum = 0;
 
+
         int i = 1;
         while( i < n && n < 100 ) {
             if (i%3 == 0)
@@ -70,7 +81,6 @@ public class Ex11_1B {
             i++;
         }
 
-        System.out.println(sum);
-        return 0;
+        return sum;
     }
 }
