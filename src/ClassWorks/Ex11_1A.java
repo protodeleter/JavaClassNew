@@ -1,4 +1,4 @@
-package Lecture10;
+package ClassWorks;
 
 import java.util.Scanner;
 
@@ -9,8 +9,10 @@ public class Ex11_1A {
 
 //        exeOne();
 //        exeTwo();
+//        exeThree();
 
-        exeThree();
+        exeFour(new int[]{5,6,7,8,9,9,5});
+
     }
 
 
@@ -145,4 +147,32 @@ public class Ex11_1A {
         System.out.println("Most number is " + max);
 
     }
+
+
+
+    public static void exeFour(int[] arr) {
+
+        int[] result = new int[arr.length];
+        int count = 0;
+        boolean seen = false;
+
+        for (int i = 0; i < arr.length; i++) {
+            for (int j = 0; j < count; j++) {
+                if (result[j] == arr[i]) {
+                    seen = true;
+                }
+            }
+            if (!seen) {
+                result[count] = arr[i];
+                count++;
+            }
+        }
+
+        for (int i = 0; i < count; i++) {
+            System.out.println(result[i]);
+        }
+
+
+    }
+
 }
