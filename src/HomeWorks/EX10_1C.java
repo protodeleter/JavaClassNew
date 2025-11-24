@@ -257,4 +257,6 @@ public class EX10_1C {
             System.out.println(newArr[i]);
         }
     }
+
+
 }
