@@ -33,6 +33,11 @@ public class TestCar {
 
         printNewesCars(parkedCars);
 
+        getAvgKms(parkedCars);
+
+        redCars(parkedCars);
+
+        twentyToForty(parkedCars);
 //        System.out.println("Car with lowest kms: ");
 
     }
@@ -70,5 +75,49 @@ public class TestCar {
 
     }
 
+    public static double getAvgKms(Car[] arr) {
+
+        double kms, sum = 0;
+
+        for (int i = 0; i < arr.length; i++) {
+            kms = arr[i].getKms();
+            sum += kms;
+        }
+        return sum / arr.length;
+    }
+
+    public static Car[] redCars(Car[] arr) {
+        String redColor = "red", carColor = "";
+        int redCc = 0;
+        for (int i = 0; i < arr.length; i++) {
+            carColor = arr[i].getColor();
+            if (redColor == carColor) {
+                redCc++;
+            }
+        }
+        Car[] redCars = new Car[redCc];
+        for (int i = 0; i < arr.length; i++) {
+            carColor = arr[i].getColor();
+
+            if (redColor == carColor) {
+                redCars[i] = arr[i];
+            }
+        }
+        return redCars;
+    }
+
+    public static void twentyToForty(Car[] arr) {
+
+        double kms = 0;
+        for (int i = 0; i < arr.length; i++) {
+            kms = arr[i].getKms();
+
+            if (kms >= 20000 && kms <= 40000)
+                System.out.println(arr[i].toString());
+
+        }
+
+
+    }
 
 }
