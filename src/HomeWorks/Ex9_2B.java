@@ -2,6 +2,8 @@ package HomeWorks;
 
 import java.util.Scanner;
 
+// Pavel Nasonov - Haim Ashraph
+
 public class Ex9_2B {
 
     static Scanner inp = new Scanner(System.in);
@@ -70,6 +72,7 @@ public class Ex9_2B {
      * @param s
      * @param place
      * @param sub
+     *
      * @return
      */
     public static String exeThree(String s, int place, String sub) {
@@ -86,6 +89,7 @@ public class Ex9_2B {
     /**
      *
      * @param s
+     *
      * @return reversed string
      */
     public static String exeFour(String s) {

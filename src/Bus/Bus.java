@@ -11,6 +11,8 @@ public class Bus {
         this.plateNumber = plateNumber;
         this.routeNumber = routeNumber;
         this.passengers = passengers;
+
+
     }
 
     public String getName() {
