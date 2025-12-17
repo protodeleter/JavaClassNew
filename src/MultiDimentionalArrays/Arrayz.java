@@ -7,41 +7,27 @@ public class Arrayz {
     public static void main(String[] args) {
 
 
+    }
+
+    public static void isMagicSquare() {
         Scanner inp = new Scanner(System.in);
+        
+        final int N = 3;
+        int[] occ = new int[N];
+        boolean isMagicSquare = false;
+        
+        int sumD1 = 0, sumD2 = 0;
+        int sumR = 0, sumC = 0;
 
-
-        int[][] arr = new int[3][3];
-
-        for (int i = 0; i < arr.length; i++) {
-
-            for (int j = 0; j < arr.length; j++) {
-
-                arr[i][j] = inp.nextInt();
-
-            }
-
+        for (int i = 0; i < occ.length; i++) {
+            occ[i] = 0;
         }
 
+        for (int i = 0; i < N; i++) {
+            for (int j = 0; j < N; j++) {
 
-        int firstSum = 0;
-        int secSum = 0;
-
-        for (int i = 0; i < arr.length; i++) {
-
-            for (int j = 0; j < arr.length; j++) {
-                if (i == 0) {
-                    firstSum += arr[i][j];
-                }
-                secSum += arr[i][j];
             }
-
-            if (secSum == firstSum) {
-                System.out.println("Perfect");
-            }
-            secSum = 0;
         }
-
-
     }
 
 
