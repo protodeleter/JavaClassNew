@@ -9,27 +9,11 @@ public class Arrayz {
 
     }
 
-    public static void isMagicSquare() {
-        Scanner inp = new Scanner(System.in);
-        
-        final int N = 3;
-        int[] occ = new int[N];
-        boolean isMagicSquare = false;
-        
-        int sumD1 = 0, sumD2 = 0;
-        int sumR = 0, sumC = 0;
+    public class MagicSquare {
 
-        for (int i = 0; i < occ.length; i++) {
-            occ[i] = 0;
-        }
 
-        for (int i = 0; i < N; i++) {
-            for (int j = 0; j < N; j++) {
-
-            }
-        }
     }
-
+}
 
 //    public static boolean isArray(Object obj) {
 //        return obj instanceof Object[] ||
@@ -43,4 +27,3 @@ public class Arrayz {
 //                obj instanceof double[];
 //    }
 
-}
