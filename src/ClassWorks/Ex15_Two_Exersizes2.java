@@ -7,41 +7,44 @@ public class Ex15_Two_Exersizes2 {
 
 
     public static void main(String[] args) {
-
-
-        int[][] data = {
-                {7, 7, 7,},
-                {7, 40 , 5},
-                {7, 60, 7}
-        };
-
-
-        System.out.println(secondExe( data ));
-
-    }
-    public static boolean secondExe( int[][] mat ) {
-
-
-        boolean isSeven = false;
-        for (int i = 0; i < mat.length; i++) {
-
-
-            for (int j = 0; j < mat.length; j++) {
-
-                System.out.println(  mat[i][ mat.length -1 -j ] );
-
-                if (mat[j][0] == 7
-                    && mat[0][j] == 7
-
-                ) {
-                    isSeven = true;
-                }
+        int length = 0;
+        Scanner inp = new Scanner(System.in);
+        System.out.println("Enter array length ");
+        length = inp.nextInt();
+        int[][] data = new int[length][length];
+        for (int i = 0; i < length; i++) {
+            System.out.println("Enter value for array " + i);
+            for (int j = 0; j < length; j++) {
+                System.out.println("Enter value  " + j);
+                data[i][j] = inp.nextInt();
             }
+        }
+        System.out.println(secondExe(data));
+    }
 
+    /**
+     * check if all array items == 7
+     *
+     * @param mat
+     *
+     * @return
+     */
+    public static boolean secondExe(int[][] mat) {
+        for (int i = 0; i < mat.length; i++) {
+            if (mat[0][i] != 7)
+                return false;
+            else if (mat[i][0] != 7) {
+                return false;
+            } else if (mat[i][mat.length - i - 1] != 7) {
+                return false;
+            } else if (mat[i][mat.length - 1] != 7) {
+                return false;
+            } else if (mat[mat.length - 1][i] != 7) {
+                return false;
+            }
         }
 
-        return isSeven;
-
+        return true;
     }
 //     0 1 2
 //   0 [][][]

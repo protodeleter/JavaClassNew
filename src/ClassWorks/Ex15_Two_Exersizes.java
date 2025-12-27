@@ -9,7 +9,8 @@ public class Ex15_Two_Exersizes {
     public static void main(String[] args) {
 
 
-        Scanner inp = new Scanner(System.in).useLocale(Locale.US);;
+        Scanner inp = new Scanner(System.in).useLocale(Locale.US);
+        ;
 
         System.out.println("Enter Array ength");
         int N = inp.nextInt();
@@ -26,9 +27,14 @@ public class Ex15_Two_Exersizes {
         }
 
 
-        firstExe( arr );
+        firstExe(arr);
     }
-    public static void firstExe( double[][] mat ) {
+
+    /**
+     *
+     * @param mat
+     */
+    public static void firstExe(double[][] mat) {
 
 
         double max = 0;
@@ -51,6 +57,6 @@ public class Ex15_Two_Exersizes {
         }
         System.out.println(max);
         System.out.println(c);
-        
+
     }
 }
