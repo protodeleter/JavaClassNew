@@ -269,5 +269,28 @@ public class Exe15_1 {
 
     }
 
+    public static void exeSeven() {
+
+        /*
+         * 123456789
+         * 200000000
+         * 300000000
+         * 400000000
+         * 500000000
+         * */
+
+    }
+
+    public static void exeEight() {
+
+        /**
+         * function populates two dimentional array from input scanner
+         * loops through the array and sums up earlier populaTed values
+         *
+         * the output should be the sum of numbers user used in input
+         */
+
+    }
+
 
 }
