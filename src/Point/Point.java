@@ -9,15 +9,21 @@ public class Point {
         this.y = y;
     }
 
+    public Point(Point o) {
+        this.x = o.getX();
+        this.y = o.getY();
+    }
+
     public int getX() {
         return this.x;
-    }
-    public int getY(){
-        return this.y;
     }
 
     public void setX(int x) {
         this.x = x;
+    }
+
+    public int getY() {
+        return this.y;
     }
 
     public void setY(int y) {
