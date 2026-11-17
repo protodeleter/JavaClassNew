@@ -5,6 +5,8 @@
 import ArrayOfPoints.ArrayOfPoints;
 import ArrayOfPoints.TestArrayOfPoints;
 import ClassWorks.WorkerExe;
+import Exceptions.NegativeValueException;
+import Exceptions.UtilityClass;
 import Exercises.Counter;
 import Exercises.Ex2_2A;
 import Point.Point;
@@ -25,18 +27,31 @@ public class Main {
 //
 //        System.out.println(tap.testArrayOfPoints(a, new Point(2,3)));
 
-        WorkerExe worker = new WorkerExe(1, "Pavel", 40, 80);
+//        WorkerExe worker = new WorkerExe(1, "Pavel", 40, 80);
+//
+//        worker.setName("Pavel nansv");
+//        System.out.println(worker.calculateSalary());
+//
+//        System.out.println(worker.print());
+//
+//        worker.setSalaryPerHour(66);
+//
+//        worker.calculateSalary();
+//
+//        System.out.println( worker.print() );
 
-        worker.setName("Pavel nansv");
-        System.out.println(worker.calculateSalary());
 
-        System.out.println(worker.print());
 
-        worker.setSalaryPerHour(66);
+        System.out.println();
 
-        worker.calculateSalary();
+        try {
+            UtilityClass.getSqrt(-4);
 
-        System.out.println( worker.print() );
+        } catch (NegativeValueException e) {
+
+            System.out.println(e.getMessage());
+        }
+
     }
 
 
