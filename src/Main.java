@@ -2,18 +2,7 @@
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 
 
-import ArrayOfPoints.ArrayOfPoints;
-import ArrayOfPoints.TestArrayOfPoints;
 import ClassWorks.WorkerExe;
-import Exceptions.NegativeValueException;
-import Exceptions.UtilityClass;
-import Exercises.Counter;
-import Exercises.Ex2_2A;
-import Point.Point;
-
-import java.util.Scanner;
-
-import Clock.Clock;
 
 public class Main {
 
@@ -41,20 +30,24 @@ public class Main {
 //        System.out.println( worker.print() );
 
 
+        WorkerExe w = new WorkerExe(1, "test", 20.5, 12);
+        WorkerExe w2 = new WorkerExe(1, "test", 20.5, 12);
+        WorkerExe w3 = new WorkerExe(3, "test 3", 10, 10);
 
-        System.out.println();
 
-        try {
-            UtilityClass.getSqrt(-4);
+        System.out.println(w.equals(w2));
 
-        } catch (NegativeValueException e) {
+        System.out.println(w);
+        System.out.println(w2);
+        System.out.println(w3);
 
-            System.out.println(e.getMessage());
-        }
 
+        System.out.println(w.getClass().getSimpleName());
+        System.out.println(w2.getClass().getSimpleName());
+        System.out.println(w3.getClass().getSimpleName());
+
+        System.out.println(w2.equals(w3));
     }
-
-
 
 
 }

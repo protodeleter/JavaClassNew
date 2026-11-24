@@ -1,5 +1,7 @@
 package ClassWorks;
 
+import java.util.Objects;
+
 public class WorkerExe {
 
     private int id;
@@ -11,7 +13,7 @@ public class WorkerExe {
         this.id = id;
         this.name = name;
         this.workingHours = workingHours;
-        this.salaryPerHour =  salaryPerHour;
+        this.salaryPerHour = salaryPerHour;
     }
 
     public WorkerExe() {
@@ -47,6 +49,7 @@ public class WorkerExe {
     public void setWorkingHours(double workingHours) {
         this.workingHours = workingHours;
     }
+
     public double getSalaryPerHour() {
         return salaryPerHour;
     }
@@ -65,4 +68,16 @@ public class WorkerExe {
     }
 
 
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) return true;
+        if (!(obj instanceof WorkerExe)) return false;
+        WorkerExe other = (WorkerExe) obj;
+        return this.id == other.id && Objects.equals(this.name, other.name) && this.workingHours == other.workingHours;
+    }
+
+    @Override
+    public String toString() {
+        return "Id: " + this.id + " " + " Name: " + this.name + " workingHours " + this.workingHours + " Salar: " + this.calculateSalary();
+    }
 }
